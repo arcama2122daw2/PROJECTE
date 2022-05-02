@@ -145,14 +145,14 @@ a:hover {
   padding-top: 60px; }
   @media (min-width: 1420px) {
     .hero-info {
-      padding-top: 140px; } }
+      padding-top: 100px; } }
   .hero-info li {
     padding-right: 15px;
     padding-left: 15px; }
   .hero-info .lnr {
     display: block;
     font-size: 32px;
-    margin-bottom: 15px; }
+    margin-bottom: 5px; }
 
 .hero-carousel .owl-prev, .hero-carousel .owl-next {
   width: 50px;
