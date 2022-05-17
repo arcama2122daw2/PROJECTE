@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 	Resto by GetTemplates.co
@@ -9,17 +10,12 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Resto - Restaurant Bootstrap 4 Template by GetTemplates.co</title>
+    <title>Resto</title>
     <meta name="description" content="Resto">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
@@ -76,18 +72,16 @@
 				<div class="row mb-5">
 					<div class="col-md-12">
 						<div class="heading-section text-center">
-							<h2>
-								Demanar menú
-							</h2>
+							<h2>Demanar menú</h2>
 						</div>  
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 menu-wrap">
+					<div class="col-lg-4 menu-wrap" id="stock-size-x" onclick="changeText(event, 'x');">
 						<div class="heading-menu">
 							<h3 class="text-center mb-5">Primeros</h3>
 						</div>
-						<div class="menus d-flex align-items-center" id="ensaladaPasta" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="ensaladaPasta" onclick = "changeColorPrimers(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/pasta-g9329780d9_1920.jpg" alt="">
 							</div>
@@ -99,10 +93,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$8</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('ensaladaPasta\n');" type="radio" name="stock-size-x" value="ensaladaPasta">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="ensaladaHigo" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="ensaladaHigo" onclick = "changeColorPrimers(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/salad-ga162335c2_1920.jpg" alt="">
 							</div>
@@ -114,10 +111,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$10</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('ensaladaHigo\n');" type="radio" name="stock-size-x" value="ensaladaHigo">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="rollitos" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="rollitos" onclick = "changeColorPrimers(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/spring-roll-gc33dd72ab_1920.jpg" alt="">
 							</div>
@@ -129,16 +129,18 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$9</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('rollitos\n');" type="radio" name="stock-size-x" value="rollitos">
+									</label>
 								</div>
 							</div>
 						</div>
 					</div>
-	
-					<div class="col-lg-4 menu-wrap">
+					<div class="col-lg-4 menu-wrap" id="stock-size-y" onclick="changeText(event, 'y');">
 						<div class="heading-menu">
 							<h3 class="text-center mb-5">Segundos</h3>
 						</div>
-						<div class="menus d-flex align-items-center" id="pavo" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="pavo" onclick = "changeColorSegons(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/asparagus-g5b49a22c1_1920.jpg" alt="">
 							</div>
@@ -150,10 +152,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$8</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('pavo\n');" type="radio" name="stock-size-y" value="pavo">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="pizzaChamp" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="pizzaChamp" onclick = "changeColorSegons(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/pizza-g69e5ce4d4_1920.jpg" alt="">
 							</div>
@@ -165,10 +170,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$9</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('pizzaChamp\n');" type="radio" name="stock-size-y" value="pizzaChamp">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="pizzaMarg" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="pizzaMarg" onclick = "changeColorSegons(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/pizza-gb3c9f087a_1920.jpg" alt="">
 							</div>
@@ -180,16 +188,19 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$9</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('pizzaMarg\n');" type="radio" name="stock-size-y" value="pizzaMarg">
+									</label>
 								</div>
 							</div>
 						</div>
 					</div>
 	
-					<div class="col-lg-4 menu-wrap">
+					<div class="col-lg-4 menu-wrap" id="stock-size-z" onclick="changeText(event, 'z');">
 						<div class="heading-menu">
 							<h3 class="text-center mb-5">Postre</h3>
 						</div>
-						<div class="menus d-flex align-items-center" id="tartaCho" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="tartaCho" onclick = "changeColorPostres(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/cake-gbbcd8c075_1920.jpg" alt="">
 							</div>
@@ -201,10 +212,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$5</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('tartaCho\n');" type="radio" name="stock-size-z" value="tartaCho">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="tarta" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="tarta" onclick = "changeColorPostres(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/cake-gccd88c4a9_1920.jpg" alt="">
 							</div>
@@ -216,10 +230,13 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$4</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('tarta\n');" type="radio" name="stock-size-z" value="tarta">
+									</label>
 								</div>
 							</div>
 						</div>
-						<div class="menus d-flex align-items-center" id="creps" onclick = "changeColor(this);">
+						<div class="menus d-flex align-items-center" id="creps" onclick = "changeColorPostres(this);">
 							<div class="menu-img rounded-circle">
 								<img class="img-fluid" src="img/hero-2.jpg" alt="">
 							</div>
@@ -231,6 +248,9 @@
 									<div class="col-4">
 										<h4 class="text-muted menu-price">$4</h4>
 									</div>
+									<label>
+										<input onclick="Puck.write('creps\n');" type="radio" name="stock-size-z" value="creps">
+									</label>
 								</div>
 							</div>
 						</div>
@@ -243,7 +263,7 @@
 					</span>
 				</div>  
 				<div class="mb-2">
-					<a class="btn btn-primary btn-shadow btn-lg" role="button">Demanar menjar!</a>
+					<button class="button btn btn-primary btn-shadow">Demanar menjar!</button>
 				</div>
 			</div>
 		</div>
@@ -253,17 +273,62 @@
 </div>
 	<!-- External JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-	<script src="vendor/bootstrap/popper.min.js"></script>
 	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js "></script>
-	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
-	<script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 
 	<!-- Main JS -->
-	<script src="js/app.min.js "></script>
-  <script src="backend.js "></script>
+	<script src="js/app3.min.js "></script>
+	<script src="https://www.puck-js.com/puck.js"></script>
+	<script type="text/javascript">
+        // Get the actual curve inside the SVG. You could make differemt
+        // parts of a more complex SVG do different things...
+        var button = document.getElementsByClassName('button')[0];
+        // Make sure your mouse cursor turns into a hand when over it, and gray it out
+        button.style="cursor:pointer;fill:#e22104";
+    
+        // Called when we get a line of data - updates the light color
+        function onLine(v) {
+          console.log("Received: "+JSON.stringify(v));
+          button.style.fill="rgb("+Math.round(v*255)+",0,0)";
+        }
+    
+        // When clicked, connect or disconnect
+        var connection;
+        button.addEventListener("click", function() {
+          if (connection) {
+            connection.close();
+            connection = undefined;
+          }
+          Puck.connect(function(c) {
+            if (!c) {
+              alert("No s'ha pogut connectar!");
+              return;
+            }
+            connection = c;
+            // Handle the data we get back, and call 'onLine'
+            // whenever we get a line
+            var buf = "";
+            connection.on("data", function(d) {
+              buf += d;
+              var i = buf.indexOf("\n");
+              while (i>=0) {
+                onLine(buf.substr(0,i));
+                buf = buf.substr(i+1);
+                i = buf.indexOf("\n");
+              }
+            });
+            // First, reset Puck.js
+            connection.write("reset();\n", function() {
+              // Wait for it to reset itself
+              setTimeout(function() {
+                // Now tell it to write data on the current light level to Bluetooth
+                // 1 times a second. Also ensure that when disconnected, Puck.js
+                // resets so the setInterval doesn't keep draining battery.
+                connection.write("setInterval(function(){Bluetooth.println(Puck.light());},100);NRF.on('disconnect', function() {reset()});\n",
+                  function() { console.log("Ready..."); });
+              }, 2000);
+            });
+          });
+        });
+      </script>
 </body>
 </html>

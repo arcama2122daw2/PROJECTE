@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 	Resto by GetTemplates.co
@@ -15,11 +16,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
@@ -32,19 +29,19 @@
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-</head>
-</div>	<div id="canvas-overlay"></div>
+</head>	
+<div id="canvas-overlay"></div>
 	<div class="boxed-page">
 		<nav id="navbar-header" class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="index.html">
-            <img src="img/logo.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="lnr lnr-menu"></span>
-        </button>
+      <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="index.html">
+          <img src="img/logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="lnr lnr-menu"></span>
+      </button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-between">
                 <li class="nav-item only-desktop">
                     <a class="nav-link" id="side-nav-open" href="#">
@@ -53,7 +50,7 @@
                 </li>
                 <div class="d-flex flex-lg-row flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="pedidos.html">Pedir</a>
+                        <a class="nav-link" href="pedidos.html">Demanar</a>
                     </li>
                 </div>
             </ul>
@@ -71,11 +68,11 @@
     </div>
 </nav>		<div class="hero">
   <div class="container">
-	<div class="row d-flex align-items-center">
-		<div class="col-lg-6 hero-left">
-		    <h1 class="display-4 mb-5">We Love <br>Delicious Foods!</h1>
+	  <div class="row d-flex align-items-center">
+		  <div class="col-lg-6 hero-left">
+		    <h1 class="display-4 mb-5">Tenim <br>Menjar Deliciós!</h1>
 		    <div class="mb-2">
-		    	<a class="btn btn-primary btn-shadow btn-lg" href="menu.html" role="button">Explore Menu</a>
+		    	<a class="btn btn-primary btn-shadow btn-lg" href="menu.html" role="button">Explorar el menu</a>
 		    </div>
 		    <ul class="hero-info list-unstyled d-flex text-center mb-0">
 		    	<li class="border-right">
@@ -119,82 +116,39 @@
                 <div class="item">
 			    	<img class="img-fluid" src="img/cake-gccd88c4a9_1920.jpg" alt="">
 			    </div>
-			</div>
+			  </div>
 	    </div>
-	</div>
+	  </div>
   </div>
-</div>
-    <svg viewBox="0 0 24 24">
-        <path fill="#000000" d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" />
-    </svg>
-    <script src="https://www.puck-js.com/puck.js"></script>
-    <script type="text/javascript">
-        // Get the actual curve inside the SVG. You could make differemt
-        // parts of a more complex SVG do different things...
-        var path = document.getElementsByTagName('path')[0];
-        // Make sure your mouse cursor turns into a hand when over it, and gray it out
-        path.style="cursor:pointer;fill:#BBB";
-    
-        // Called when we get a line of data - updates the light color
-        function onLine(v) {
-          console.log("Received: "+JSON.stringify(v));
-          path.style.fill="rgb("+Math.round(v*255)+",0,0)";
-        }
-    
-        // When clicked, connect or disconnect
-        var connection;
-        path.addEventListener("click", function() {
-          if (connection) {
-            connection.close();
-            connection = undefined;
-          }
-          Puck.connect(function(c) {
-            if (!c) {
-              alert("Couldn't connect!");
-              return;
-            }
-            connection = c;
-            // Handle the data we get back, and call 'onLine'
-            // whenever we get a line
-            var buf = "";
-            connection.on("data", function(d) {
-              buf += d;
-              var i = buf.indexOf("\n");
-              while (i>=0) {
-                onLine(buf.substr(0,i));
-                buf = buf.substr(i+1);
-                i = buf.indexOf("\n");
-              }
-            });
-            // First, reset Puck.js
-            connection.write("reset();\n", function() {
-              // Wait for it to reset itself
-              setTimeout(function() {
-                // Now tell it to write data on the current light level to Bluetooth
-                // 10 times a second. Also ensure that when disconnected, Puck.js
-                // resets so the setInterval doesn't keep draining battery.
-                connection.write("setInterval(function(){Bluetooth.println(Puck.light());},100);NRF.on('disconnect', function() {reset()});\n",
-                  function() { console.log("Ready..."); });
-              }, 2000);
-            });
-          });
-        });
-      </script>
-</footer>	</div>
+  <div class="inner container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="footer-widget pr-lg-5 pr-0">
+          <img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
+          <p>Descripció</p>
+          <nav class="nav nav-mastfoot justify-content-start">
+               <a class="nav-link" href="#" target="_blank">
+                 <i class="fab fa-facebook-f"></i>
+               </a>
+               <a class="nav-link" href="#" target="_blank">
+                 <i class="fab fa-twitter"></i>
+               </a>
+               <a class="nav-link" href="#" target="_blank">
+                 <i class="fab fa-instagram"></i>
+               </a>
+           </nav>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 	<!-- External JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-	<script src="vendor/bootstrap/popper.min.js"></script>
 	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js "></script>
 	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
-	<script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+
 
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
-  <script src="backend.js "></script>
 </body>
 </html>
