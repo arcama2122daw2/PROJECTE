@@ -1,22 +1,16 @@
-
 <!DOCTYPE html>
-<!--
-	Resto by GetTemplates.co
-	URL: https://gettemplates.co
--->
-<html lang="en">
+<html lang="es">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Resto - Restaurant</title>
-    <meta name="description" content="Resto">
+    <title>Card&Eat</title>
+    <meta name="description" content="Card&Eat">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
@@ -26,8 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
 
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
 
 </head>	
 <div id="canvas-overlay"></div>
@@ -35,7 +28,7 @@
 		<nav id="navbar-header" class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="index.html">
-          <img src="img/logo.png" alt="">
+          <img src="fotos/logo.png" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="lnr lnr-menu"></span>
@@ -55,7 +48,7 @@
                 </div>
             </ul>
             <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="#">
-                <img src="img/logo.png" alt="">
+                <img src="fotos/logo.png" alt="">
             </a>
             <ul class="navbar-nav d-flex justify-content-between">
                 <div class="d-flex flex-lg-row flex-column">
@@ -96,36 +89,71 @@
 		    </ul>
 
 	    </div>
-	    <div class="col-lg-6 hero-right">
-	    	<div class="owl-carousel owl-theme hero-carousel">
-			    <div class="item">
-			    	<img class="img-fluid" src="img/hero-1.jpg" alt="">
-			    </div>
-			    <div class="item">
-			    	<img class="img-fluid" src="img/hero-2.jpg" alt="">
-			    </div>
-			    <div class="item">
-			    	<img class="img-fluid" src="img/hero-3.jpg" alt="">
-			    </div>
-                <div class="item">
-			    	<img class="img-fluid" src="img/asparagus-g5b49a22c1_1920.jpg" alt="">
-			    </div>
-                <div class="item">
-			    	<img class="img-fluid" src="img/pizza-gb3c9f087a_1920.jpg" alt="">
-			    </div>
-                <div class="item">
-			    	<img class="img-fluid" src="img/cake-gccd88c4a9_1920.jpg" alt="">
-			    </div>
-			  </div>
-	    </div>
+	    <div class="slide">
+			<div class="slide-inner">
+				<input class="slide-open" type="radio" id="slide-1" 
+			 	     name="slide" aria-hidden="true" hidden="" checked="checked">
+				<div class="slide-item">
+					<img src="img/asparagus-g5b49a22c1_1920.jpg">
+				</div>
+				<input class="slide-open" type="radio" id="slide-2" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="img/cake-gccd88c4a9_1920.jpg">
+				</div>
+				<input class="slide-open" type="radio" id="slide-3" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="img/hero-1.jpg">
+				</div>
+        <input class="slide-open" type="radio" id="slide-4" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="img/pasta-g9329780d9_1920.jpg">
+				</div>
+        <input class="slide-open" type="radio" id="slide-5" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="img/pizza-gb3c9f087a_1920.jpg">
+				</div>
+        <label for="slide-5" class="slide-control prev control-1">‹</label>
+				<label for="slide-4" class="slide-control next control-3">›</label>
+				<label for="slide-3" class="slide-control prev control-4">‹</label>
+				<label for="slide-2" class="slide-control next control-1">›</label>
+				<label for="slide-1" class="slide-control prev control-2">‹</label>
+        <label for="slide-5" class="slide-control next control-4">‹</label>
+				<label for="slide-4" class="slide-control prev control-5">›</label>
+				<label for="slide-3" class="slide-control next control-2">›</label>
+				<label for="slide-2" class="slide-control prev control-3">‹</label>
+				<label for="slide-1" class="slide-control next control-5">›</label>
+				<ol class="slide-indicador">
+					<li>
+						<label for="slide-1" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-2" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-3" class="slide-circulo">•</label>
+					</li>
+          <li>
+						<label for="slide-4" class="slide-circulo">•</label>
+					</li>
+          <li>
+						<label for="slide-5" class="slide-circulo">•</label>
+					</li>
+				</ol>
+			</div>
+		</div>
 	  </div>
   </div>
   <div class="inner container">
     <div class="row">
       <div class="col-lg-4">
         <div class="footer-widget pr-lg-5 pr-0">
-          <img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
+          <img src="fotos/logo.png" class="img-fluid footer-logo mb-3" alt="">
           <p>Descripció</p>
+          <h6>Aquesta pàgina web ha estat feta amb el proposit d'un treball final de grau per Arnau Carrasco</h6>
           <nav class="nav nav-mastfoot justify-content-start">
                <a class="nav-link" href="#" target="_blank">
                  <i class="fab fa-facebook-f"></i>
@@ -145,10 +173,5 @@
 	<!-- External JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-
-
-	<!-- Main JS -->
-	<script src="js/app.min.js "></script>
 </body>
 </html>
